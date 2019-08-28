@@ -1,5 +1,13 @@
 # E-COMMERCE
 
+```
+Deploy Server :
+http://35.240.233.129
+
+Deploy Client :
+http://ecommerce.nurfitrys.com
+```
+
 ## Basic Routes
 
 ### Register New User
