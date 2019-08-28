@@ -80,7 +80,8 @@ class ProductController {
         })
         .catch(err => {
             if (RegExp('Cast to ObjectId failed').test(err.message)) {
-                res.status(404).json({
+                next({
+                    code: 404,
                     message: err.message
                 })
             }

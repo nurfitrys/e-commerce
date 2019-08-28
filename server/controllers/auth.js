@@ -22,7 +22,8 @@ class AuthController {
                     })
                 }
                 else {
-                    res.status(403).json({
+                    next({
+                        code : 403,
                         message: err.message
                     })
                 }

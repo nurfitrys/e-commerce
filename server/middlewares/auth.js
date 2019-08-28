@@ -20,9 +20,7 @@ module.exports = {
                     })
                 }
             })
-            .catch(err => {
-                next(err)
-            })
+            .catch(next)
         }
         catch (err) {
             next({

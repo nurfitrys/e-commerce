@@ -69,7 +69,7 @@ export default {
         })
         .catch(err => {
           if (err.response) {
-            swal(err.response.data.message)
+            swal(err.response.data)
           } else {
             console.log(err)
           }
@@ -101,7 +101,7 @@ export default {
           .catch(err => {
             console.log(err)
             if (err.response) {
-              swal(err.response.data.message)
+              swal(err.response.data)
             } else {
               console.log(err)
             }

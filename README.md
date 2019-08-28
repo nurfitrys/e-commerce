@@ -258,37 +258,51 @@
         }
     ]
     ```
+---
 
 ## Error Response
 
-- Response
+### The error response includes following fields :
 
+- Message: the error message
+- Details: a field for additional information, which may or may not be populated
+- Description: description of the specific error
+- Code: Unique error response code
+- Http_response:
+    ```
+    Message: HTTP response message
+    Code: HTTP response status code
+    ```
+
+### Example Code :
+
+- `code : 400`
 ```
-{
-    code : 400,
-    message: "Email has been taken"
-}
-{
-    code : 401
-    message : "Wrong password"
-}
-{
-    code : 404
-    message : "Not found"
-}
-{
-    code : 404
-    message : "Internal server error"
-}
+    BAD REQUEST
+    Invalid syntax for this request was provided
+```
+- `code : 401`
+```
+    UNAUTHORIZED
+    Account is not authorized to access the requested resource
+```
+- `code : 403`
+```
+    FORBIDDEN
+    Account is not authorized to access the requested resource
+```
+- `code : 404`
+```
+    NOT FOUND
+    Could not find the resource you requested
+```
+- `code : 500`
+```
+    INTERNAL SERVER ERROR
+    Unexpected internal server error
 ```
 
-### Code Response
-
-- `400` Bad Request, kesalahan dari client
-- `401` Request tidak memiliki authorisasi
-- `403` Diakibatkan oleh email/password salah, token tidak valid
-- `404` Data yang dicari tidak ditemukan
-- `500` Error berasal dari internal server
+---
 
 ## Usage
 

@@ -84,9 +84,7 @@ class TransactionController {
         .then(([updatedUser, newTransaction, productUpdated]) => {
             res.status(201).json(newTransaction)
         })
-        .catch(err => {
-            next(err)
-        })
+        .catch(next)
     }
 
     static update(req, res, next) {
