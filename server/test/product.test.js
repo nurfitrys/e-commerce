@@ -12,6 +12,7 @@ let token = null;
 let adminToken = null;
 
 before(function(done) {
+    this.timeout(10000)
     let arr = [
         User
             .create({
@@ -33,8 +34,8 @@ before(function(done) {
         .then(([user, admin]) => {
             token = sign(user._id, user.name, user.role)
             adminToken = sign(admin._id, admin.name, admin.role)
-
-            clearProduct(done)
+            done()
+            //clearProduct(done)
         })
         .catch(err => {
             console.log(err)
@@ -42,9 +43,9 @@ before(function(done) {
 
 })
 
-after(function(done) {
-    clearProduct(done)
-})
+// after(function(done) {
+//     clearProduct(done)
+// })
 
 describe('Product Test', function() {
 

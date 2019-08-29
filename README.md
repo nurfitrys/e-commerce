@@ -1,12 +1,14 @@
 # E-COMMERCE
 
 ```
-Deploy Server :
-http://35.240.233.129
-
 Deploy Client :
 http://ecommerce.nurfitrys.com
+
+Deploy Server :
+http://35.240.233.129
 ```
+
+---
 
 ## Basic Routes
 
@@ -58,6 +60,8 @@ http://ecommerce.nurfitrys.com
         accesstoken: "<generated access token>"
     }
     ```
+
+---
 
 ## Product Routes
 
@@ -154,6 +158,9 @@ http://ecommerce.nurfitrys.com
         ok: 1
     }
     ```
+
+---
+
 ## Cart Route
 
 ### Get User Cart
@@ -203,6 +210,8 @@ http://ecommerce.nurfitrys.com
     }
     ```
     
+---
+
 ## Transaction Route
 
 ### Checkout Product in Cart
@@ -235,7 +244,6 @@ http://ecommerce.nurfitrys.com
         }
     }
     ```
-
 
 ### Get Transaction Detail
 
@@ -319,7 +327,7 @@ Run this command:
 Server:
 ```
 $ npm install
-$ npm run dev
+$ nodemon app.js
 ```
 Client:
  

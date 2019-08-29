@@ -6,11 +6,12 @@ const { clearUser } = require('../helpers/clearDb')
 
 chai.use(chaiHttp)
 
-before(function(done) {
-    clearUser(done)
-})
+// before(function(done) {
+//     clearUser(done)
+// })
 
 after(function(done) {
+    this.timeout(10000)
     clearUser(done)
 })
 
